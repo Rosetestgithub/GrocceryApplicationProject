@@ -24,7 +24,7 @@ public class LoginTest extends Base {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");
 		LoginPage page=new LoginPage(driver);
-		page.enterUsernameOnUsernameField(usernameValue);
+		//page.enterUsernameOnUsernameField(usernameValue);
 		page.enterPasswordOnPasswordField(passwordValue);
 		page.clickOnSignInButton();
 	}
