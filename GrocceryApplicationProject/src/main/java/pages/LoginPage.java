@@ -12,16 +12,16 @@ public class LoginPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(name="username")WebElement username;
-	@FindBy(name="password")WebElement password;
+	@FindBy(name="username")WebElement usernameField;
+	@FindBy(name="password")WebElement passwordField;
 	@FindBy(tagName="button")WebElement signInBtn;
 	
 	
 	public void enterUsernameOnUsernameField(String usernameValue) {
-		username.sendKeys(usernameValue);
+		usernameField.sendKeys(usernameValue);
 	}
 	public void enterPasswordOnPasswordField(String passwordValue) {
-		password.sendKeys(passwordValue);
+		passwordField.sendKeys(passwordValue);
 	}
 	public void clickOnSignInButton() {
 		signInBtn.click();

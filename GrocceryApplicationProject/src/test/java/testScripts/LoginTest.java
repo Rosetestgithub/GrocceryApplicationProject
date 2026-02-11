@@ -9,43 +9,43 @@ import pages.LoginPage;
 import utilities.ExcelUtility;
 
 public class LoginTest extends Base {
-	@Test
+	@Test(priority=1)
 	public void verifyUserWithValidCredentials() throws IOException {
-		String usernameValue=ExcelUtility.getStringData(0, 0, "LoginPage");
+		String usernameValue=ExcelUtility.getStringData(10, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(0, 1, "LoginPage");
-		LoginPage page=new LoginPage(driver);
-		page.enterUsernameOnUsernameField(usernameValue);
-		page.enterPasswordOnPasswordField(passwordValue);
-		page.clickOnSignInButton();
+		LoginPage login=new LoginPage(driver);
+		login.enterUsernameOnUsernameField(usernameValue);
+		login.enterPasswordOnPasswordField(passwordValue);
+		login.clickOnSignInButton();
 	}
 	
-	@Test
+	@Test(priority=2,description = "Verify user login with valid username and invalid password")
 	public void verifyUserWithValidUsernameAndInvalidPassword() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(1, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(1, 1, "LoginPage");
-		LoginPage page=new LoginPage(driver);
-		//page.enterUsernameOnUsernameField(usernameValue);
-		page.enterPasswordOnPasswordField(passwordValue);
-		page.clickOnSignInButton();
+		LoginPage login=new LoginPage(driver);
+		login.enterUsernameOnUsernameField(usernameValue);
+		login.enterPasswordOnPasswordField(passwordValue);
+		login.clickOnSignInButton();
 	}
 	
-	@Test
+	@Test(priority=3)
 	public void verifyUserWithInvalidUsernameAndValidPassword() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(2, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(2, 1, "LoginPage");
-		LoginPage page=new LoginPage(driver);
-		page.enterUsernameOnUsernameField(usernameValue);
-		page.enterPasswordOnPasswordField(passwordValue);
-		page.clickOnSignInButton();
+		LoginPage login=new LoginPage(driver);
+		login.enterUsernameOnUsernameField(usernameValue);
+		login.enterPasswordOnPasswordField(passwordValue);
+		login.clickOnSignInButton();
 	}
 	
-	@Test
+	@Test(priority=4)
 	public void verifyUserWithInvalidCredentials() throws IOException {
 		String usernameValue=ExcelUtility.getStringData(3, 0, "LoginPage");
 		String passwordValue=ExcelUtility.getStringData(3, 1, "LoginPage");
-		LoginPage page=new LoginPage(driver);
-		page.enterUsernameOnUsernameField(usernameValue);
-		page.enterPasswordOnPasswordField(passwordValue);
-		page.clickOnSignInButton();
+		LoginPage login=new LoginPage(driver);
+		login.enterUsernameOnUsernameField(usernameValue);
+		login.enterPasswordOnPasswordField(passwordValue);
+		login.clickOnSignInButton();
 	}
 }

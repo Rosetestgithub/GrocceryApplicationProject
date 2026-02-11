@@ -13,7 +13,7 @@ public class ExcelUtility {
 	static XSSFWorkbook w;
 	static XSSFSheet s;
 	public static String getStringData(int a, int b, String sheet) throws IOException {
-		f=new FileInputStream("C:\\Users\\HOME\\eclipse-workspace\\GrocceryApplicationProject\\src\\test\\resources\\TestData.xlsx");
+		f=new FileInputStream("C:\\Users\\HOME\\git\\GrocceryApplicationProject\\GrocceryApplicationProject\\src\\test\\resources\\TestData.xlsx");
 		w=new XSSFWorkbook(f);
 		s=w.getSheet(sheet);
 		XSSFRow row=s.getRow(a);
@@ -21,3 +21,4 @@ public class ExcelUtility {
 		return cell.getStringCellValue();
 	}
 }
+//"C:\Users\HOME\git\GrocceryApplicationProject\GrocceryApplicationProject\src\test\resources\TestData.xlsx"
