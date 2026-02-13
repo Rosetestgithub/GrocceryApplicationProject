@@ -13,7 +13,6 @@ public class AdminUsersPage {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(xpath ="//p[contains(text(),'Dashboard')]//preceding::a[text()='More info ']")WebElement moreInfolink;
 	@FindBy(xpath = "//a[@onclick='click_button(1)']")WebElement newBtn;
 	@FindBy(id="username")WebElement usernameField;
 	@FindBy(id="password")WebElement passwordField;
@@ -25,21 +24,13 @@ public class AdminUsersPage {
 	@FindBy(xpath="//button[@name='Search']")WebElement searchButton;
 	@FindBy(linkText = "Reset")WebElement resetBtn;
 	
-	public void clickOnAdminUsersMoreInfo() {
-		moreInfolink.click();
-	}
+	
 	public void clickOnNewButton() {
 		newBtn.click();
 	}
-	/*public void enterUsernameOnUsernameField() {
-		usernameField.sendKeys("jfffin");
-	}*/
 	public void enterUsernameOnUsernameField(String username) {
 		usernameField.sendKeys(username);
-		}
-	/*public void enterPasswordOnPasswordField() {
-		passwordField.sendKeys("jfffin");
-	}*/
+	}
 	public void enterPasswordOnPasswordField(String password) {
 		passwordField.sendKeys(password);
 	}
@@ -53,9 +44,6 @@ public class AdminUsersPage {
 	public void clickOnSearchButton() {
 		searchBtn.click();
 	}
-	/*public void enterUsernameOnUsernameFieldForSearching() {
-		usernameFd.sendKeys("Jain");
-	}*/
 	public void enterUsernameOnUsernameFieldForSearching(String username) {
 		usernameFd.sendKeys(username);
 	}
